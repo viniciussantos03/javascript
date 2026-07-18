@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div id="formulario">
+            <form>
+            <div class="espaco">
+                <label for="inicio">Início:</label>
+                <input type="number" name="tinicio" id="inicio">
+            </div>
+
+            <div class="espaco">
+                <label for="fim">Fim:</label>
+                <input type="number" name="tfim" id="fim">
+            </div>
+
+            <div class="espaco">
+                <label for="passo">Passo:</label>
+                <input type="number" name="tpasso" id="passo">
+            </div>
+
+            <div>
+                <input type="button" value="Contar" onclick="contar()">
+            </div>
+            </form>
+        </div>
+
+        <div id="res">
+            Preparando a contagem...
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank" rel="external">CursoemVídeo</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
