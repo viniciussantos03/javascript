@@ -1,0 +1,115 @@
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 480px 
+Celular: de 481 ate 768px
+Tablet: de 769 até 1024px
+Desktop: de 1025 até 1200px
+Grande telas: acima de 1201px
+*/
+
+:root {
+    --cor-fundo: white;
+    --cor-principal: #BEA57D;
+    --cor-secundaria: #4C230A;
+    --cor-teciaria: #EFF2C0;
+}
+
+body.escuro {
+    --cor-fundo: black;
+    --cor-principal: #F72C25 ;
+    --cor-secundaria: #650D1B;
+    --cor-teciaria: #EF7B45  ;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../imagens/logo.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 530px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2em;
+    text-shadow: 0px 0px 2px white;
+}
+header > nav > a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-size: 1.1em;
+    transition: color 0.5s;
+}
+
+header > nav > a:hover {
+    color: var(--cor-principal);
+}
+
+.introducao h2 {
+    font-size: 1.6em;
+    color: var(--cor-secundaria);
+    text-align: center;
+    margin: 10px 5px;
+}
+
+.introducao p {
+    font-size: 1em;
+    margin: 10px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-secundaria);
+    height: 500px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.opcoes h3 {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 20px 0px;
+    color: #BEA57D;
+}
+
+.opcoes p {
+     text-align: center;
+     margin: 0px 10px;
+     color: #BEA57D;
+}
+
+.opcoes img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    color: var(--cor-teciaria);
+    padding: 20px;
+}
+
+footer p {
+    margin-top: 10px;
+}

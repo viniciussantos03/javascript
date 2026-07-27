@@ -1,0 +1,119 @@
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header {
+        min-height: 900px;
+        background-size: 100% auto;
+        background-position: center top;
+        background-attachment: fixed;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    .introducao h2 {
+        font-size: 1.8em;
+    }
+
+    .introducao p {
+        font-size: 1.1em;
+    }
+
+    .opcoes h3 {
+        font-size: 1.5em;
+    }
+
+    .opcoes p {
+        font-size: 1.1em;
+    }
+
+    footer {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 1025px)  and (max-width: 1314px) {
+    header {
+        height: 950px;
+        background-attachment: fixed;
+    }
+
+    header h1 {
+        font-size: 2.4em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .introducao h2 {
+        font-size: 2em;
+    }
+
+    .introducao p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .opcoes h3 {
+        font-size: 1.7em;
+    }
+
+    .opcoes p {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1315px) {
+    header {
+        height: 950px;
+        background-attachment: fixed;
+    }
+
+    header h1 {
+        font-size: 2.4em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .introducao h2 {
+        font-size: 2em;
+    }
+
+    .introducao p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    #cards {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .opcoes {
+        width: 100%;
+    }
+
+    .opcoes h3 {
+        font-size: 1.7em;
+    }
+
+    .opcoes p {
+        font-size: 1.2em;
+    }
+
+    footer {
+        font-size: 1.2em;
+    }
+}
