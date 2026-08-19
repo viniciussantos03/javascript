@@ -12,6 +12,7 @@ if(x > 0) {
 
     clearTimeout(myTimer)
     console.log('O x passou de 0')
+    
 }
 
 // clearInterval
