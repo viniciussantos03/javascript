@@ -1,10 +1,10 @@
-// mouseover
+// evento de mouseover
 
 const title = document.querySelector('#title')
 
 title.addEventListener('mouseover', function() {
 
-    title.style.backgroundColor = 'blue'
+    this.style.backgroundColor = 'blue'
 
 })
 
