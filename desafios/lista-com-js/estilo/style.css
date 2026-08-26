@@ -123,6 +123,7 @@ body {
 #lista .done {
     text-decoration: line-through;
     color: wheat;
+    background-color: var(--cor-1);
 }
 
 #lista .hide {

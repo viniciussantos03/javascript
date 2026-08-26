@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#div-dados h1 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+#dados-calc .calculadora-imc {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+#dados-calc .calculadora-imc label {
+    font-size: 1.3em;
+}
+
+#dados-calc .calculadora-imc input {
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#dados-calc #botao {
+    margin-top: 20px;
+    padding: 3px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+.texto {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
