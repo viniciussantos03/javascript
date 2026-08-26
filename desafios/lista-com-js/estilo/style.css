@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-1: #3581B8;
+    --cor-2: #FF8811;
+    --cor-3: #70F8BA;
+    --cor-4: #C3423F;
+
+    --cor-confere1: #2A7221;
+    --cor-confere2: #119822;
+
+    --cor-remove1: #FF0000;
+    --cor-remove2: #8B0000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #3581B8, #70F8BA);
+    margin-top: 50px;
+    color: white;
+}
+
+#lista-tarefas h1 {
+    font-size: 2.5em;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.171);
+}
+
+#lista-tarefas form {
+    display: flex;
+    margin-top: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.205);
+}
+
+#lista-tarefas input {
+    padding-left: 10px;
+}
+
+#lista-tarefas #tarefa {
+    font-size: 1.5em;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid var(--cor-2);
+    color: var(--cor-4);
+    transition: 0.5s;
+}
+
+#lista-tarefas #tarefa:focus {
+    outline: none;
+}
+
+#lista-tarefas #tarefa::placeholder {
+    color: var(--cor-4);
+    opacity: 0.3;
+}
+
+#lista-tarefas .botao {
+    width: 50px;
+    font-size: 1.2em;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid var(--cor-2);
+    color: var(--cor-4);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#lista-tarefas .botao:hover {
+    background-color: var(--cor-2);
+}
+
+#lista .lista-texto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: var(--cor-2);
+    height: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#lista .texto {
+    margin-left: 10px;
+    font-size: 1.2em;
+    color: #880D1E;
+}
+
+#lista #confere {
+    margin-right: 10px;
+}
+
+.dif {
+    height: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 5px;
+}
+
+#lista #confere {
+    color: var(--cor-confere1);
+    transition: 0.5s;
+}
+
+#lista #confere:hover {
+    background-color: var(--cor-confere2);
+}
+
+#lista #remove {
+    color: var(--cor-remove1);
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+#lista #remove:hover {
+    background-color: var(--cor-remove2);
+}
+
+#lista .done {
+    text-decoration: line-through;
+    color: wheat;
+}
+
+#lista .hide {
+    display: none;
+}
+
