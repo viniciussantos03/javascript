@@ -17,8 +17,7 @@ function calcular() {
 
     const altura = document.querySelector('#altura')
     const alturaValor = Number(altura.value)
-
-    const resultado = document.querySelector('#resultado')
+    
     const texto = document.querySelector('.texto')
 
     if(nome === '') {
@@ -43,14 +42,10 @@ function calcular() {
         } else if(calculoIMC > 24.9) {
             texto.textContent = `${nome} de ${idadeValor} anos tem o IMC de ${calculoIMC}, está acima da média!`
         }
-        resultado.appendChild(texto)
     } else {
         texto.textContent = 'Por favor, digite números válidos!'
-        alert('digite peso de 4 a 635 e altura de 0.1 a 2.72')
-        resultado.appendChild(texto)
     }
     } else {
         texto.textContent = 'adicione uma idade válida!'
-        resultado.appendChild(texto)
     }
 }
