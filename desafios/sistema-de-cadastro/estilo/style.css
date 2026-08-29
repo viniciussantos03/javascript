@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#container-cadastro h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+#container-cadastro form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#container-cadastro label {
+    margin: 8px 0px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#container-cadastro input {
+    padding: 2px;
+    width: 950px;
+    border-radius: 5px;
+}
+
+#enviar-informacoes #cadastrar {
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resultado p.informacao {
+    margin: 20px 0px;
+}
+
+.resultado .informacao {
+    font-size: 1.5em;
+}
+
+.resultado .funcao {
+    font-size: 1em;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resultado .excluir {
+    margin-left: 10px;
+}
+
+.resultado .hide {
+    display: none;
+}

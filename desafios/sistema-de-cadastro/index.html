@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <main>
+        <div id="container-cadastro">
+            <h1>Cadastre seus Dados</h1>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" name="inome" id="nome">
+                <label for="idade">Idade:</label>
+                <input type="number" name="iidade" id="idade" autocomplete="off">
+                <label for="email">E-mail:</label>
+                <input type="email" name="iemail" id="email">
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="icidade" id="cidade">
+
+                <div id="enviar-informacoes">
+                    <button id="cadastrar">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="container-resultado">
+            <div class="resultado">
+                <p class="informacao"></p>
+                <button class="editar funcao hide">Editar</button>
+                <button class="excluir funcao hide">Excluir</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
