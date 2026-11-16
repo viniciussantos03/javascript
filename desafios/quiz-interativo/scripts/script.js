@@ -1,4 +1,4 @@
-const perguntas = [
+const quiz = [
     {
         pergunta: "Qual é o maior planeta do Sistema Solar?",
         alternativas: ["Terra", "Saturno", "Júpiter", "Netuno"],
@@ -65,3 +65,38 @@ const perguntas = [
         respostaCorreta: "Coração"
     }
 ];
+
+const perguntas = document.querySelector('#perguntas')
+const alternativas = document.querySelectorAll('.alternativas button')
+const botaoProximo = document.querySelector('#proximo')
+
+let indice = 0
+
+function questoes() {
+    const perguntaDaQuestao = perguntas.textContent = quiz[indice].pergunta
+
+    const colocarAlternativaEmCadaBloco = quiz[indice].alternativas.forEach((alternativa, indice) => {
+        alternativas[indice].textContent = alternativa
+    })
+
+    const respostaCorreta = quiz[indice].respostaCorreta
+    
+    if(colocarAlternativaEmCadaBloco === respostaCorreta) {
+        proximaQuestao()
+    }
+}
+
+function proximaQuestao() {
+    indice++
+    questoes()
+}
+
+botaoProximo.addEventListener('click', () => proximaQuestao())
+
+alternativas.forEach((alternativa2) => {
+            alternativa2.addEventListener('click', () => {
+                alternativa2.style.backgroundColor = 'blue'
+            })
+        })
+
+questoes()
