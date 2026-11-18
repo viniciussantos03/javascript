@@ -71,6 +71,7 @@ const alternativas = document.querySelectorAll('.alternativas button')
 const botaoProximo = document.querySelector('#proximo')
 
 let indice = 0
+let respostaCerta = false
 
 function questoes() {
     const perguntaDaQuestao = perguntas.textContent = quiz[indice].pergunta
@@ -78,12 +79,6 @@ function questoes() {
     const colocarAlternativaEmCadaBloco = quiz[indice].alternativas.forEach((alternativa, indice) => {
         alternativas[indice].textContent = alternativa
     })
-
-    const respostaCorreta = quiz[indice].respostaCorreta
-    
-    if(colocarAlternativaEmCadaBloco === respostaCorreta) {
-        proximaQuestao()
-    }
 }
 
 function proximaQuestao() {
@@ -91,12 +86,26 @@ function proximaQuestao() {
     questoes()
 }
 
-botaoProximo.addEventListener('click', () => proximaQuestao())
+botaoProximo.addEventListener('click', () => {
+        if(respostaCerta) {
+            proximaQuestao()
+            respostaCerta = false
+        }
+})
 
-alternativas.forEach((alternativa2) => {
-            alternativa2.addEventListener('click', () => {
-                alternativa2.style.backgroundColor = 'blue'
-            })
-        })
+alternativas.forEach((alternativa) => {
+    alternativa.addEventListener('click', () => {
+
+        alternativa.style.backgroundColor = 'blue'
+
+        const respostaCorreta = quiz[indice].respostaCorreta
+    
+        if(alternativa.textContent === respostaCorreta) {
+            respostaCerta = true
+        } else {
+            return
+        }
+    })
+})
 
 questoes()
