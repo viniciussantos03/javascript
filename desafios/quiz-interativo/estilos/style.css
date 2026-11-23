@@ -9,7 +9,8 @@ body {
     background-color: #F3F4F8;
 }
 
-.quiz-container {
+.quiz-container,
+.resultado-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,7 +19,8 @@ body {
     text-align: center;
 }
 
-.quiz {
+.quiz,
+.resultado {
     background-color: #fff;
     padding: 50px;
     border-radius: 20px;
@@ -37,11 +39,23 @@ h1 {
 }
 
 .opcoes {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     margin-left: 20px;
     cursor: pointer;
+    vertical-align: middle;
 }
+
+.hide {
+    display: none;
+}
+
+#situacao, 
+#resposta {
+    text-align: left;
+    padding-top: 20px;
+}
+
 
 #proximo {
     font-weight: bold;
@@ -56,4 +70,26 @@ h1 {
 #proximo:hover {
     color: #343957;
     background-color: #E8E9FF;
+}
+
+svg {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+svg.fa-x {
+    color: red;
+}
+
+svg.fa-check {
+    color: green;
+}
+
+.resultado-container h3 {
+    font-size: 1.3em;
+}
+
+.resultado-container p {
+    padding-top: 20px;
+    font-size: 1.1em;
 }

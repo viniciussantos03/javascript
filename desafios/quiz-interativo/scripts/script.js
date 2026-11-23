@@ -69,25 +69,73 @@ const quiz = [
 const perguntas = document.querySelector('#perguntas')
 const alternativas = document.querySelectorAll('.alternativas button')
 const botaoProximo = document.querySelector('#proximo')
+const situacao = document.querySelector('#situacao')
+const resposta = document.querySelector('#resposta')
 
 let indice = 0
+let acertos = 0
+let erros = 0
 let respostaCerta = false
 
 function questoes() {
-    const perguntaDaQuestao = perguntas.textContent = quiz[indice].pergunta
+    perguntas.textContent = quiz[indice].pergunta
 
-    const colocarAlternativaEmCadaBloco = quiz[indice].alternativas.forEach((alternativa, indice) => {
+    quiz[indice].alternativas.forEach((alternativa, indice) => {
         alternativas[indice].textContent = alternativa
     })
+
+    alternativas.forEach((alt) => {
+            alt.disabled = false
+        })
+
+    situacao.style.display = 'none'
+    situacao.innerHTML = ''
+    resposta.style.display = 'none'
+    resposta.textContent = ''
 }
 
 function proximaQuestao() {
+    const quizContainer = document.querySelector('.quiz-container')
+
+    const resultadoContainer = document.querySelector('.resultado-container')
+    
+    if(quiz.length - 1 === indice) {
+        quizContainer.style.display = 'none'
+
+        resultadoContainer.style.display = 'flex'
+
+        // atualizando valores
+        const acertosTotais = document.querySelector('#acertos')
+        const avaliacao = document.querySelector('#avaliacao')
+        const errosTotais = document.querySelector('#erros')
+
+        acertosTotais.textContent = `Acertos: ${acertos}`
+        errosTotais.textContent = `Erros: ${erros}`
+
+        if(acertos === 0) {
+            avaliacao.textContent = 'Mano...Como???'
+        }
+        if(acertos <= 4 && acertos > 0) {
+            avaliacao.textContent = 'Precisa estudar um pouco mais e diversificar conteúdos! mas ta razoável.'
+        }
+        if(acertos <= 8 && acertos > 4) {
+            avaliacao.textContent = 'Você ta na médida, parabéns, continue se esforçando para resultados cada vez maiores!'
+        }
+        if(acertos <= 12 && acertos > 8) {
+            avaliacao.textContent = 'Mano, você é definitivamente um gênio, zerou o jogo, continue assim e se dedique cada vez mais!'
+        }
+        return
+    }
+
     indice++
     questoes()
 }
 
 botaoProximo.addEventListener('click', () => {
         if(respostaCerta) {
+            alternativas.forEach((alt) => {
+                alt.style.backgroundColor = ''
+            })
             proximaQuestao()
             respostaCerta = false
         }
@@ -95,15 +143,45 @@ botaoProximo.addEventListener('click', () => {
 
 alternativas.forEach((alternativa) => {
     alternativa.addEventListener('click', () => {
-
-        alternativa.style.backgroundColor = 'blue'
+            alternativas.forEach((alt) => {
+                alt.style.backgroundColor = ''
+            })
 
         const respostaCorreta = quiz[indice].respostaCorreta
-    
+
         if(alternativa.textContent === respostaCorreta) {
             respostaCerta = true
+
+                alternativa.style.backgroundColor = 'green'
+                alternativas.forEach(alt => {
+                    alt.disabled = true
+                })
+            
+            situacao.style.display = 'block'
+            situacao.innerHTML = '<i class="fa-solid fa-check"></i>  Parabéns, você acertou!'
+
+            // pegar número de acertos e mostrar resultado
+
+            acertos++
+
         } else {
-            return
+            respostaCerta = true
+
+            alternativa.style.backgroundColor = 'red'
+
+            alternativas.forEach(alt => {
+                alt.disabled = true
+            })
+
+            situacao.style.display = 'block'
+            situacao.innerHTML = `<i class="fa-solid fa-x"></i> você errou! Tente novamente.`
+
+            resposta.style.display = 'block'
+            resposta.textContent = `A resposta correta era: ${respostaCorreta}`
+
+            // pegar número de erros
+
+            erros++
         }
     })
 })

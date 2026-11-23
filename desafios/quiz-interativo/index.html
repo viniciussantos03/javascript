@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Interativo</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <script src="https://kit.fontawesome.com/278760cac2.js" crossorigin="anonymous"></script>
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
@@ -19,7 +20,19 @@
                     <button id="opcao3" class="opcoes"></button>
                     <button id="opcao4" class="opcoes"></button>
                 </div>
+                <div id="situacao" class="hide"></div>
+                <div id="resposta" class="hide"></div>
                 <button id="proximo">Próximo</button>
+            </div>
+        </div>
+
+        <div class="resultado-container hide">
+            <div class="resultado">
+            <h3>Parabéns, você finalizou o quiz!</h3>
+                <p id="acertos"></p>
+                <p id="erros"></p>
+
+                <p id="avaliacao"></p>
             </div>
         </div>
     </main>
