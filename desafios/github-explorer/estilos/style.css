@@ -10,8 +10,8 @@ a {
 }
 
 :root {
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
+    --bg-primary: #010101;
+    --bg-secondary: #0d1117;
     --border: #30363d;
     --text-primary: #f0f6fc;
     --text-secondary: #8b949e;
@@ -32,6 +32,8 @@ a {
 
 body {
     font-family: var(--font-sans);
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
 }
 
 code, pre {
@@ -54,6 +56,8 @@ code, pre {
     color: var(--text-primary);
     display: flex;
 }
+
+/* celular e tablet */
 
 .mobile-tablet {
     display: flex;
@@ -95,6 +99,8 @@ code, pre {
     height: 100%;
 }
 
+/* hamburguinho mobile */
+
 .menu-hamburguinho {
     display: flex;
     align-items: center;
@@ -112,6 +118,8 @@ code, pre {
     padding: 10px;
     height: 100%;
 }
+
+/* menu */
 
 .div-menu {
     position: fixed;
@@ -132,6 +140,8 @@ code, pre {
     padding-left: 30px;
     font-weight: 600;
 }
+
+/* lupinha de pesquisa */
 
 #botao-pesquisar {
     position: fixed;
@@ -168,4 +178,142 @@ code, pre {
     right: 26px;
     top: 39%;
     transform: translateY(-50%);
+}
+
+/* navegação main */
+
+.navegacao-main {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #0d1117;
+    padding: 10px;
+}
+
+.navegacao-main nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 0.8em;
+    justify-content: center;
+}
+
+.navegacao-main nav a {
+    transition: all 0.2s;
+}
+
+.navegacao-main .fica-acima {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.navegacao-main .fica-acima:hover {
+    color: var(--text-primary);
+}
+
+.navegacao-main nav a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--border);
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+}
+
+/* seção explore */
+
+#main-explore {
+    margin: 50px 10px 10px 10px;
+    
+}
+
+#main-explore .introducao {
+    font-size: 0.6em;
+}
+
+/* Seção Topicos */
+
+.secao-topicos {
+    background-color: var(--border);
+    padding: 50px;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.secao-topicos h2 {
+    font-size: 1.7em;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+}
+
+/* Topicos populares */
+
+.todos-topicos {
+    margin: 30px 20px 20px 20px;
+    border: 1px solid var(--text-secondary);
+    border-radius: 5px;
+    padding: 45px;
+    text-align: center;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.todos-topicos:hover {
+    transform: scale(1.03);
+}
+
+.todos-topicos .fa-react,
+.todos-topicos .fa-python {
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+.todos-topicos h3 {
+    color: var(--text-primary);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.todos-topicos p {
+    font-size: 0.85em;
+    line-height: 1.5em;
+}
+
+/* topicos faturados */
+
+.topicos-faturados {
+    margin: 0px 10px;
+}
+
+.topicos-faturados .faturados {
+    color: var(--text-primary);
+    font-size: 0.8em;
+    margin-top: 50px;
+}
+
+.topicos-faturados .topico {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 20px;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0px;
+    gap: 10px;
+}
+
+.topicos-faturados svg {
+    font-size: 3em;
+    align-self: center;
+}
+
+.info-topico h3 {
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.info-topico p {
+    line-height: 1.5em;
+    font-size: 0.9em;
 }
